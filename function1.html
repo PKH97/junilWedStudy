@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        main();
+        
+        function main(){
+            let name = "김준일";
+            let adderss = "부산 동래구 사직동";
+            
+            print(name);
+            print(adderss);
+            
+            let num1 = 10;
+            let num2 = 20;
+            
+            let add = function (x, y) { // -> 익명함수의 기본 형태
+                return x + y;
+            }; 
+
+            let sub = (x, y) => x - y; // 위와 같은 익명함수. 람다처럼 축약해서 쓰는것이 가능
+
+            let square = x => x * x; // 매개변수가 하나일 때 ()생략가능
+            
+            let result = add(num1, num2);
+            console.log(result);
+
+            result = sub(num2, num1);
+            console.log(result);
+
+            result = square(num1);
+            console.log(result);
+            // 람다와 다른 점은 .을 사용하지 않고 메소드를 호출가능
+        }
+
+        function print(value){
+            console.log("value: " + value);
+        }
+    </script>
+</body>
+</html>
